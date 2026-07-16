@@ -26,12 +26,21 @@ Example:
 python3 mealy.py "Maquinas de Mealy/m1.txt" "Palavras/w16.txt" output.ppm
 ```
 
+## Examples
+
+Output generated from the `w512.txt` input word, run through each of the three sample Mealy Machines:
+
+| Machine 1 | Machine 2 | Machine 3 |
+|---|---|---|
+| ![Machine 1 output](examples/m1.png) | ![Machine 2 output](examples/m2.png) | ![Machine 3 output](examples/m3.png) |
+
 ## Repository Structure
 
 ```
 mealy.py                 # Simulator
 Maquinas de Mealy/        # Sample Mealy Machine specifications
 Palavras/                 # Sample input words of varying length
+examples/                 # Generated output images (PNG)
 Relatório LFA - URIEL.pdf # Full academic report (Portuguese)
 ```
 
