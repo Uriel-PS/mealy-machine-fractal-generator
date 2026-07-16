@@ -1,22 +1,40 @@
-# 🧠 Simulador de Máquina de Mealy — LFA 2025/2
+# Mealy Machine Simulator
 
-Projeto desenvolvido para a disciplina de **Linguagens Formais e Autômatos (LFA)**.  
-Implementa a simulação de uma **Máquina de Mealy** que lê a descrição formal de um autômato e uma palavra de entrada, gerando como saída uma **imagem PPM (formato P1)**.  
+Project developed for the Formal Languages and Automata Theory course, Computer Science program at UDESC (Universidade do Estado de Santa Catarina).
 
-Autor: **Uriel Pacheco de Souza**
-Docente: **Karina Girardi Roggia**
-Período: **2025/2**
+Simulates a **Mealy Machine** that reads a formal automaton specification and an input word, producing a **PPM image (P1 format)** as output. Since a Mealy Machine's output depends on both the current state and the input symbol, feeding it different words generates different fractal-like patterns.
 
----
+**Author:** Uriel Pacheco de Souza
+**Instructor:** Karina Girardi Roggia
+**Term:** 2025/2
 
-## ⚙️ Funcionalidades
+## How It Works
 
-- Lê arquivos `.txt` com a especificação de uma Máquina de Mealy (estado inicial, transições e saídas).
-- Lê uma palavra de entrada (arquivo `.txt`) com símbolos `{1,2,3,4,. ,N}`.
-- Simula a execução da máquina, gerando uma sequência de saídas (`0`, `1` e `\n`).
-- Constrói automaticamente uma **imagem PPM (P1)** com base na saída.
-- Permite visualizar a imagem diretamente no **Google Colab** ou convertê-la para `.png`.
+1. Reads a `.txt` file describing the Mealy Machine (initial state, transitions, and outputs).
+2. Reads a `.txt` file with the input word (symbols `{1,2,3,4,.,N}`).
+3. Simulates the machine step by step, producing a sequence of `0`s, `1`s, and line breaks as output.
+4. Converts that output into a **PPM (P1) image**, viewable directly (e.g. in Google Colab) or convertible to `.png`.
 
----
+## Usage
 
-**LEIA O RELATÓRIO PARA MAIORES INFORMAÇÕES**
+```bash
+python3 mealy.py <machine_spec.txt> <input_word.txt> <output.ppm>
+```
+
+Example:
+```bash
+python3 mealy.py "Maquinas de Mealy/m1.txt" "Palavras/w16.txt" output.ppm
+```
+
+## Repository Structure
+
+```
+mealy.py                 # Simulator
+Maquinas de Mealy/        # Sample Mealy Machine specifications
+Palavras/                 # Sample input words of varying length
+Relatório LFA - URIEL.pdf # Full academic report (Portuguese)
+```
+
+## Documentation
+
+The full report, including the formal definition of the automaton, design decisions, and example outputs, is available in this repository as a PDF (in Portuguese).
